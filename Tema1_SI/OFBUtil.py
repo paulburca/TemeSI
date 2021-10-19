@@ -1,9 +1,8 @@
-from Crypto.Util.Padding import pad, unpad
 import AESUtil
 
 
 def xor(first, second):
-    return  bytes(a ^ b for (a, b) in zip(first, second))
+    return bytes(a ^ b for (a, b) in zip(first, second))
 
 
 def encrypt(text, iv, K):

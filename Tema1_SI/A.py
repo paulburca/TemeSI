@@ -4,7 +4,7 @@ import AESUtil
 import ECBUtil
 import OFBUtil
 
-mode = 'OFB'
+mode = 'ECB'
 K = b''
 enc_k = b''
 
@@ -57,8 +57,8 @@ def text_send(s):
     wait_signal(s)
     f = open("text.txt", "rb")
     text = f.read()
-    s.send(bytes(str(len(text)), 'utf-8'))
     enc_text = encrypt_message(text)
+    s.send(len(enc_text).to_bytes(4, 'big'))
     send_message(s, enc_text)
 
 

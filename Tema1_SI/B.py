@@ -24,7 +24,7 @@ def send_signal(conn):
 
 def get_text(conn):
     size = conn.recv(4)
-    text = conn.recv(int.from_bytes(size, "little"))
+    text = conn.recv(int.from_bytes(size, 'big'))
     return text
 
 
@@ -51,6 +51,7 @@ def accept_conn():
     s.listen()
     conn, _ = s.accept()
     message = get_data(conn)
+    #print(message)
     print(message.decode())
     conn.close()
     s.close()
