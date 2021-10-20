@@ -1,8 +1,9 @@
 This is a text.
-aaaaaaaaaaaaaa
-aaaaaaaaaaaaaa
-aaaaaaaaaaaasd
-aaaaaaaaaadasdasd
-asdcxzxczcx
-zxcw
-2
+I wrote this text.
+Hello there, nice seeing you read this text.
+Test text, test text, yeah, the text it's showing.
+Text check!
+Do you like writing text?
+To text or not to text?
+THIS TEXT IS IN CAPS.
+this text is fully lowercase.
