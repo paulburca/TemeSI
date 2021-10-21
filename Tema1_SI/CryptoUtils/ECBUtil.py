@@ -5,7 +5,7 @@ from CryptoUtils import AESUtil
 def encrypt(text, k):
     enc = b''
     text = pad(text, 16)
-    # adds padding so that it can be divide in 16 bytes blocks
+    # adds padding so that it can be divided in 16 bytes blocks
     while text:
         block = text[0:16]
         text = text[16:]

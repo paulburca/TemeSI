@@ -54,18 +54,14 @@ def get_data(conn):
     return dec_text
 
 
-def accept_conn():
-    # connects to server, gets data, decrypts it and prints it
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        s.bind((IP, PORT_B))
-        s.listen()
-        print("Waiting for connections")
-        conn, _ = s.accept()
-        print("Connected to A")
-        message = get_data(conn)
-        print("The message:\n" + message.decode())
-        conn.close()
-        print("\nConnection closed")
-
-
-accept_conn()
+# connects to server, gets data, decrypts it and prints it
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    s.bind((IP, PORT_B))
+    s.listen()
+    print("Waiting for connections")
+    connection, _ = s.accept()
+    print("Connected to A")
+    message = get_data(connection)
+    print("The message:\n" + message.decode())
+    connection.close()
+    print("\nConnection closed")

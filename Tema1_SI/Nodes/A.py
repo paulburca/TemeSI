@@ -51,8 +51,8 @@ def connect(port):
 
 def wait_signal(sock):
     # Waits for a signal of size 2 through the socket 'sock'
-    sock.recv(2)
-    print("Start signal received")
+    if sock.recv(2) == b'GO':
+        print("Start signal received")
 
 
 def encrypt_message(text):

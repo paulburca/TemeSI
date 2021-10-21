@@ -3,7 +3,6 @@ from CryptoUtils import AESUtil
 
 
 def xor(first, second):
-    # the xor of 2 arrays of bytes of size 16
     return bytes(first[index] ^ second[index] for index in range(0, 16))
 
 
