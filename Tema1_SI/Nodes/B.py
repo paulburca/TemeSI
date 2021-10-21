@@ -65,6 +65,7 @@ def accept_conn():
         message = get_data(conn)
         print("The message:\n" + message.decode())
         conn.close()
+        print("\nConnection closed")
 
 
 accept_conn()
